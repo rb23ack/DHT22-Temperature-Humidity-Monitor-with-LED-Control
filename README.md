@@ -1,6 +1,6 @@
 # ESP32 Temperature, Humidity, and Button-Controlled LED with OLED Display
 
-This project utilizes an ESP32 microcontroller to read temperature and humidity data from a DHT22 sensor, display the readings on an SSD1306 OLED display, and control an LED based on button presses. The button toggles the LED blinking on and off, with debounce logic implemented for reliable button presses.
+This project utilizes an ESP32 microcontroller to read temperature and humidity data from a DHT22 sensor, display the readings on an SSD1306 OLED display, and control an LED based on button presses. The button toggles the LED blinking on and off, with debounce logic implemented for reliable button presses. I built it using "Wokwi" the online simulator. It is a great tool for prototyping. We need to be careful with wirings when building the physical device since it's a bit different when implementing the "actual" work. 
 
 ## Components Used
 
