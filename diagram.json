@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Riya ",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": 129.64, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 226.8,
+      "left": -130.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 272.75,
+      "left": -96,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 108.74,
+      "left": -28.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -57.3, "left": 359.4, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 246.2,
+      "left": 240,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v9.6", "h-38.4", "v-86.4", "h-144", "v28.8" ] ],
+    [ "dht1:GND", "esp:GND.3", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:16", "green", [ "v0" ] ],
+    [ "oled1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "oled1:GND", "esp:GND.1", "black", [ "v-19.2", "h105.6", "v38.4" ] ],
+    [ "oled1:SCL", "esp:33", "green", [ "v0" ] ],
+    [ "oled1:SDA", "esp:13", "green", [ "v-48", "h67.27", "v76.8" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "esp:4", "green", [ "v-38.4", "h229.2", "v-38.4", "h76.8", "v-57.6" ] ],
+    [
+      "led1:C",
+      "esp:GND.1",
+      "green",
+      [ "v19.2", "h-47.6", "v-67.2", "h144", "v0", "h124.8", "v-48", "h-9.6", "v-67.2" ]
+    ],
+    [ "btn1:1.l", "esp:18", "green", [ "h0", "v-48", "h57.6", "v-57.6" ] ],
+    [ "esp:GND.2", "btn1:1.r", "black", [ "v-105.6", "h192", "v-9.6" ] ]
+  ],
+  "dependencies": {}
+}
