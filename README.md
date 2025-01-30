@@ -22,7 +22,7 @@ This project utilizes an ESP32 microcontroller to read temperature and humidity 
   - GND → GND
   - SDA → GPIO 33 (SDA_PIN)
   - SCL → GPIO 13 (SCL_PIN)
-
+  
 - **LED**:
   - Anode → GPIO 4 (LED_PIN)
   - Cathode → GND
