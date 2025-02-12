@@ -68,5 +68,5 @@ This project is programmed in Arduino IDE and uses the following libraries:
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the MIT License.  
    
