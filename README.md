@@ -6,7 +6,7 @@ This project utilizes an ESP32 microcontroller to read temperature and humidity 
 
 - **ESP32**: Microcontroller for the project.
 - **DHT22**: Temperature and humidity sensor.  
-- **SSD1306 OLED Display**: 128x64 pixel OLED display.
+- **SSD1306 OLED Display**: 128x64 pixel OLED display.   
 - **LED**: Used to show blinking based on button press.  
 - **Push Button**: Used to toggle the LED blinking.
 
